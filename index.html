@@ -1,10 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/vendor/modernizr.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+            $("#report tr:odd").addClass("odd");
+            $("#report tr:not(.odd)").hide();
+            $("#report tr:first-child").show();
+            
+            $("#report tr.odd").click(function(){
+                $(this).next("tr").toggle();
+                $(this).find(".arrow").toggleClass("up");
+            });
+            //$("#report").jExpand();
+        });</script>
+  </head>
 <body>
+	<div class="row">
+		<div class="large-12 columns">
+			<h1>Employee Directory</h1>
+		</div>
+	</div>
 
+	<div class="row">
+		<div class="large-12 columns">
+			
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-12 columns">
+		<ul class="accordion" data-accordion>
+		  <li class="accordion-navigation">
+		    <a href="#panel1a">Accordion 1</a>
+		    <div id="panel1a" class="content">
+		      Panel 1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		    </div>
+		  </li>
+		  <li class="accordion-navigation">
+		    <a href="#panel2a">Accordion 2</a>
+		    <div id="panel2a" class="content">
+		      Panel 2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		    </div>
+		  </li>
+		  <li class="accordion-navigation">
+		    <a href="#panel3a">Accordion 3</a>
+		    <div id="panel3a" class="content">
+		      Panel 3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+		    </div>
+		  </li>
+		</ul>
+		</div>
+	</div>
+
+	<div class="row">
+      <div class="large-12 columns">
+        <h5>headline</h5>
+        
+	    <table class="responsive" id="report">
+	        <tr>
+	            <th>Name</th>
+	            <th>Department</th>
+	            <th>Extension</th>
+	            <th>Work Phone</th>
+	            <th>Cell</th>
+	            <th>Location</th>
+	            <th></th>
+	        </tr>
+	        <tr>
+	            <td>Kyle Watkinson</td>
+	            <td>IT Development</td>
+	            <td>2451</td>
+	            <td>+35317995051</td>
+	            <td>+353831626666</td>
+	            <td>Dublin</td>
+	            <td><div>&#x25BC&#x25B2</div></td>
+	        </tr>
+	        <tr>
+	            <td colspan="7">
+	                <img src="125px-Flag_of_the_United_States.svg.png" alt="Flag of USA" />
+	                <h4>Additional information</h4>
+	                <ul>
+	                    <li><a href="http://en.wikipedia.org/wiki/Usa">USA on Wikipedia</a></li>
+	                    <li><a href="http://nationalatlas.gov/">National Atlas of the United States</a></li>
+	                    <li><a href="http://www.nationalcenter.org/HistoricalDocuments.html">Historical Documents</a></li>
+	                 </ul>   
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>Ken Moran</td>
+	            <td>IT Development</td>
+	            <td>2451</td>
+	            <td>+35317995051</td>
+	            <td>+353831626666</td>
+	            <td>Dublin</td>
+	            <td><div>&#x25BC&#x25B2</div></td>
+	        </tr>
+	        <tr>
+	            <td colspan="5">
+	                <img src="125px-Flag_of_the_United_Kingdom.svg.png" alt="Flag of UK" />
+	                <h4>Additional information</h4>
+	                <ul>
+	                    <li><a href="http://en.wikipedia.org/wiki/United_kingdom">UK on Wikipedia</a></li>
+	                    <li><a href="http://www.visitbritain.com/">Official tourist guide to Britain</a></li>
+	                    <li><a href="http://www.statistics.gov.uk/StatBase/Product.asp?vlnk=5703">Official 
+	                        Yearbook of the United Kingdom</a></li>
+	                </ul>
+	                
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>Shane O'Sullivan</td>
+	            <td>IT Development</td>
+	            <td>2451</td>
+	            <td>+35317995051</td>
+	            <td>+353831626666</td>
+	            <td>Dublin</td>
+	            <td><div>&#x25BC&#x25B2</div></td>
+	        </tr>
+	        <tr>
+	            <td colspan="5">
+	                <img src="125px-Flag_of_India.svg.png" alt="Flag of India" />
+	                <h4>Additional information</h4>
+	                <ul>
+	                    <li><a href="http://en.wikipedia.org/wiki/India">India on Wikipedia</a></li>
+	                    <li><a href="http://india.gov.in/">Government of India</a></li>
+	                    <li><a href="http://wikitravel.org/en/India">India travel guide</a></li>
+	                 </ul>   
+	            
+	            </td>
+	        </tr>
+	    </table>
+      </div>
+    </div>
+    </body>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
 
 </html>
